@@ -18,7 +18,7 @@ export default function Post({ posts: initialposts }) {
   const page = searchParams.get("page");
   const pageIndex = parseInt(page) || 1;
 
-  const POSTS_PER_PAGE = 6;
+  const POSTS_PER_PAGE = 4;
 
   const [isLoading, setIsLoading] = useState(false);
   const [isFirstPage, setIsFirstPage] = useState(false);
@@ -53,11 +53,11 @@ export default function Post({ posts: initialposts }) {
   }, [posts]);
 
   const handleNextPage = () => {
-    router.push(`/archive?page=${pageIndex + 1}`);
+    router.push(`/blog?page=${pageIndex + 1}`);
   };
 
   const handlePrevPage = () => {
-    router.push(`/archive?page=${pageIndex - 1}`);
+    router.push(`/blog?page=${pageIndex - 1}`);
   };
 
   return (

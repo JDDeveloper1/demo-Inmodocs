@@ -4,7 +4,7 @@ import { cx } from "@/utils/all";
 import { urlForImage } from "@/lib/sanity/image";
 import { parseISO, format } from "date-fns";
 import { PhotoIcon } from "@heroicons/react/24/outline";
-import CategoryLabel from "@/components/blog/category";
+import CategoryLabel from "@/components/blogin/category";
 
 export default function PostAlt({
   post,

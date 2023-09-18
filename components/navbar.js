@@ -28,20 +28,10 @@ export default function Navbar(props) {
 
   const rightmenu = [
     {
-      label: "Archive",
-      href: "/archive"
+      label: "Blog",
+      href: "/blog",
     },
-    {
-      label: "Pro Version",
-      href: "https://stablo-pro.web3templates.com/",
-      external: true,
-      badge: "new"
-    },
-    {
-      label: "Download",
-      href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
-      external: true
-    }
+
   ];
 
   const mobilemenu = [...leftmenu, ...rightmenu];
@@ -86,7 +76,7 @@ export default function Navbar(props) {
                       />
                     ) : (
                       <span className="block text-center">
-                        Stablo
+                        Inmodocs
                       </span>
                     )}
                   </Link>
@@ -100,7 +90,7 @@ export default function Navbar(props) {
                       />
                     ) : (
                       <span className="block text-center">
-                        Stablo
+                        Inmodocs
                       </span>
                     )}
                   </Link>

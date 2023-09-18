@@ -4,7 +4,7 @@ import { cx } from "@/utils/all";
 import { urlForImage } from "@/lib/sanity/image";
 import { parseISO, format } from "date-fns";
 import { PhotoIcon } from "@heroicons/react/24/outline";
-import CategoryLabel from "@/components/blog/category";
+import CategoryLabel from "@/components/blogin/category";
 
 export default function PostList({
   post,
@@ -38,12 +38,11 @@ export default function PostList({
               aspect === "landscape"
                 ? "aspect-video"
                 : aspect === "custom"
-                ? "aspect-[5/4]"
-                : "aspect-square"
+                  ? "aspect-[5/4]"
+                  : "aspect-square"
             )}
-            href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${
-              post.slug.current
-            }`}>
+            href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${post.slug.current
+              }`}>
             {imageProps ? (
               <Image
                 src={imageProps.src}
@@ -76,17 +75,16 @@ export default function PostList({
                 fontSize === "large"
                   ? "text-2xl"
                   : minimal
-                  ? "text-3xl"
-                  : "text-lg",
+                    ? "text-3xl"
+                    : "text-lg",
                 fontWeight === "normal"
                   ? "line-clamp-2 font-medium  tracking-normal text-black"
                   : "font-semibold leading-snug tracking-tight",
                 "mt-2    dark:text-white"
               )}>
               <Link
-                href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${
-                  post.slug.current
-                }`}>
+                href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${post.slug.current
+                  }`}>
                 <span
                   className="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom
       bg-no-repeat
@@ -104,9 +102,8 @@ export default function PostList({
               {post.excerpt && (
                 <p className="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400">
                   <Link
-                    href={`/post/${
-                      pathPrefix ? `${pathPrefix}/` : ""
-                    }${post.slug.current}`}>
+                    href={`/post/${pathPrefix ? `${pathPrefix}/` : ""
+                      }${post.slug.current}`}>
                     {post.excerpt}
                   </Link>
                 </p>
